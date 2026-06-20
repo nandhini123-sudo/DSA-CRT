@@ -1,7 +1,7 @@
 class TreeNode:
     def __init__(self,data):
         self.val=data
-        self.lelft=None
+        self.left=None
         self.right=None
 class BST:
     def __init__(self):
@@ -16,3 +16,13 @@ class BST:
         elif val>root.val:
             root.right=self.insert(root.right,val)
         return root
+    def Inorder(self,root):
+        if root:
+            self.Inorder(root.left)
+            print(root.val)
+            self.Inorder(root.right)
+bst=BST()
+root=None
+for i in [50,30,20,70,80]:
+    root=bst.insert(root,i)
+bst.Inorder(root)
