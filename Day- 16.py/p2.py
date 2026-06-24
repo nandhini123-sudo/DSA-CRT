@@ -3,7 +3,7 @@ def build_graph(n,edges):
     graph=[[0]*n for i in range(n)]
     for u,v in edges:
         graph[u][v]=1
-        graph[v][u]=1__
+        graph[v][u]=1
     return graph
 edges=[[1,0],[2,3],[1,2]]
 graph=build_graph(4,edges)
