@@ -22,3 +22,19 @@ def dfs(graph,start):
         if not visited[node]:
             visited[node]=True
             print(node,end="")
+
+
+def bfs(graph, start):
+    n = len(graph)
+    visited = [False] * n
+    q = deque([start])
+    visited[start] = True
+    print("BFS Traversal:")
+    while q:
+        node = q.popleft()
+        print(node, end=" ")
+        for i in range(n):
+            if graph[node][i] == 1 and not visited[i]:
+                visited[i] = True
+                q.append(i)
+    print()
